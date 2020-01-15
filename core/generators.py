@@ -6,8 +6,8 @@ def gen(N):
         yield randint(1, 99)
 
 # написать генераторное выражение, которое делает то же самое
-# (с той лишь разницей, что N захардкожено)
-genexp = (randint(1,99) for i in range(11))
+N = 11
+genexp = (randint(1,99) for i in range(N))
 
 print([number for number in gen(11)])
 print([number for number in genexp])
