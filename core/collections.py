@@ -8,13 +8,13 @@ def even(some_not_even_list):
 # Следующий код с циклом, переписать с использованием спискового включения (list comprehension)
 years_of_birth = [1990, 1991, 1990, 1990, 1992, 1991]
 def get_ages(some_years_of_birth):
-    return [ 2014 - year for year in years_of_birth ]
+    return [ 2014 - year for year in some_years_of_birth ]
 
 # Есть список numbers, реализовать логику в функции get_first_n_last: вернуть новый список состоящий из первого и последнего элемента переданного списка
 numbers = [5, 10, 15, 20, 25]
 def get_first_n_last(some_list):
-    return [numbers[0], numbers[-1]]
-    return numbers[::len(numbers)-1]
+    return [some_list[0], some_list[-1]] if some_list else []
+    # return some_list[::len(some_list)-1]
 
 # Написать функцию, которая принимает список и возвращает новый список, состоящий из элементов принятого, но без повторений
 list_with_repetition = [1, 1, 3, 4, 2, 2, 2, 6]
@@ -43,3 +43,10 @@ print(get_first_n_last(numbers))
 print(get_list_without_repetition(list_with_repetition))
 print(map_keys_and_values(keys, values))
 print(count_symbols(s))
+
+print(even([]))
+print(get_ages([]))
+print(get_first_n_last([]))
+print(get_list_without_repetition([]))
+print(map_keys_and_values([], []))
+print(count_symbols(''))
